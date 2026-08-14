@@ -1,5 +1,10 @@
 package net.vibatron.createbotr;
 
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
+import net.vibatron.createbotr.block.ModBlocks;
+import net.vibatron.createbotr.item.ModCreativeModeTabs;
+import net.vibatron.createbotr.item.ModItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -32,6 +37,11 @@ public class CreateBotr {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
+        ModCreativeModeTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
@@ -45,7 +55,13 @@ public class CreateBotr {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        //if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+         //   event.accept(ModItems.ROSE_GOLD);
+        //}
 
+       // if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+           // event.accept(ModBlocks.ROSE_GOLD_BLOCK);
+        //}
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
