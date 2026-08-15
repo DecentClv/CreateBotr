@@ -1,6 +1,5 @@
 package net.vibatron.createbotr.block;
 
-import appeng.api.ids.AEItemIds;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.Ingredient;

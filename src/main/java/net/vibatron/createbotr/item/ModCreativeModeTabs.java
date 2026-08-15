@@ -21,6 +21,7 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.ROSE_GOLD);
                         output.accept(ModBlocks.ROSE_GOLD_BLOCK);
+                        output.accept(ModItems.LOGIC_CIRCUIT);
                     }).build());
 
     public static void register(IEventBus eventBus) {

@@ -12,6 +12,9 @@ public class ModItems {
     public static final DeferredItem<Item> ROSE_GOLD = ITEMS.register("rose_gold",
             () -> new  Item(new Item.Properties()));
 
+    public static final DeferredItem<Item> LOGIC_CIRCUIT = ITEMS.register("logic_circuit",
+            () -> new  Item(new Item.Properties()));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
