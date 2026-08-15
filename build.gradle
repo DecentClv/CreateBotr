@@ -29,6 +29,10 @@ sourceSets.main.resources {
 
 repositories {
     // Add here additional repositories if required by some of the dependencies below.
+    maven {
+        name = "CurseMaven"
+        url = "https://cursemaven.com"
+    }
 }
 
 base {
@@ -116,6 +120,14 @@ configurations {
 }
 
 dependencies {
+    //compileOnly "org.appliedenergistics:appliedenergistics2:19.2.17:api"
+    localRuntime "curse.maven:applied-energistics-2-223794:7027323"
+    localRuntime "curse.maven:guideme-1173950:8420861"
+    localRuntime "curse.maven:create-new-age-905861:8215216"
+    localRuntime "curse.maven:createaddition-439890:8188476"
+    localRuntime "curse.maven:power-grid-1321420:7999916"
+    localRuntime "curse.maven:create-328085:7963363"
+    localRuntime "curse.maven:architectury-api-419699:8492726"
     // Example optional mod dependency with JEI
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
     // compileOnly "mezz.jei:jei-${mc_version}-common-api:${jei_version}"

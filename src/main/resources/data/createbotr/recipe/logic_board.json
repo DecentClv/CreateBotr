@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "ae2:calculation_processor"
+    },
+    "B": {
+      "item": "ae2:engineering_processor"
+    },
+    "C": {
+      "item": "ae2:logic_processor"
+    },
+    "D": {
+      "item": "create_new_age:overcharged_diamond_wire"
+    },
+    "E": {
+      "item": "powergrid:portable_battery"
+    },
+    "F": {
+      "item": "createaddition:electrum_spool"
+    },
+    "G": {
+      "item": "create_new_age:copper_circuit"
+    }
+  },
+  "pattern": [
+    "FGF",
+    "DED",
+    "ABC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "createbotr:rose_gold_block"
+  }
+}
