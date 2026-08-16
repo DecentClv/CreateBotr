@@ -7,6 +7,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.vibatron.createbotr.CreateBotr;
+import net.vibatron.createbotr.item.custom.LogicCircuitItem;
 
 import java.awt.*;
 
@@ -17,7 +18,13 @@ public class ModItems {
             () -> new  Item(new Item.Properties()));
 
     public static final DeferredItem<Item> LOGIC_CIRCUIT = ITEMS.register("logic_circuit",
-            () -> new  Item(new Item.Properties()));
+            () -> new LogicCircuitItem(new Item.Properties()));
+
+    public static final DeferredItem<Item> PACK_ICON = ITEMS.register("createbotr_pack_icon",
+            () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> MOLTEN_ROSE_GOLD_BUCKET = ITEMS.register("molten_rose_gold_bucket",
+            () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

@@ -16,12 +16,13 @@ public class ModCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, CreateBotr.MOD_ID);
 
     public static final Supplier<CreativeModeTab> CREATE_BOTR_TAB = CREATIVE_MODE_TAB_DEFERRED_REGISTER.register("create_botr_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.ROSE_GOLD.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.PACK_ICON.get()))
                     .title(Component.translatable("creativetab.createbotr.create_botr_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.ROSE_GOLD);
                         output.accept(ModBlocks.ROSE_GOLD_BLOCK);
                         output.accept(ModItems.LOGIC_CIRCUIT);
+                        output.accept(ModItems.MOLTEN_ROSE_GOLD_BUCKET);
                     }).build());
 
     public static void register(IEventBus eventBus) {

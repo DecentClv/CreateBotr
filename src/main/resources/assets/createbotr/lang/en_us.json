@@ -1,6 +1,12 @@
 {
   "item.createbotr.rose_gold": "Rose Gold",
-  "item.createbotr.logic_circuit": "§2Logic Board",
+
+
+  "item.createbotr.logic_circuit": "§dLogic Circuit",
+  "tooltip.createbotr.logic_circuit.shift_down": "Main unit for the §eCreate Bot'r§r.",
+  "tooltip.createbotr.logic_circuit": "Press §eShift§r for more information",
+
+  "item.createbotr.molten_rose_gold_bucket": "Bucket of Rose Gold",
 
   "creativetab.createbotr.create_botr_tab": "Create: Bot'r",
 

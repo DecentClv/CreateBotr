@@ -1,5 +1,6 @@
 package net.vibatron.createbotr.item.custom;
 
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -12,9 +13,14 @@ public class LogicCircuitItem extends Item {
         super(properties);
     }
 
-
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+        if (Screen.hasShiftDown()) {
+            tooltipComponents.add(Component.translatable("tooltip.createbotr.logic_circuit.shift_down"));
+        } else {
+            tooltipComponents.add(Component.translatable("tooltip.createbotr.logic_circuit"));
+        }
+
         super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
     }
 }
