@@ -1,5 +1,6 @@
 package net.vibatron.createbotr.item;
 
+import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -7,6 +8,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.vibatron.createbotr.CreateBotr;
+import net.vibatron.createbotr.fluid.ModFluids;
 import net.vibatron.createbotr.item.custom.LogicCircuitItem;
 
 import java.awt.*;
@@ -24,7 +26,7 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
 
     public static final DeferredItem<Item> MOLTEN_ROSE_GOLD_BUCKET = ITEMS.register("molten_rose_gold_bucket",
-            () -> new Item(new Item.Properties()));
+            () -> new BucketItem(ModFluids.MOLTEN_ROSE_GOLD.get(), new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

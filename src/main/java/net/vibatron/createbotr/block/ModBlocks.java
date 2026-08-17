@@ -2,7 +2,6 @@ package net.vibatron.createbotr.block;
 
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.SoundType;
@@ -27,16 +26,17 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(4f).requiresCorrectToolForDrops().sound(SoundType.METAL)));
 
-    /*public static final DeferredBlock<Block> MOLTEN_ROSE_GOLD_BLOCK = registerBlock("molten_rose_gold",
-            () -> new LiquidBlock(
-                    ModFluids.MOLTEN_ROSE_GOLD.get(),
-                    Block.Properties.of()
-                            .mapColor(MapColor.FIRE)
-                            .replaceable()
-                            .noCollission()
-                            .strength(100.0F)
-                            .noLootTable()
-            ));*/
+    public static final DeferredBlock<LiquidBlock> MOLTEN_ROSE_GOLD_BLOCK =
+            BLOCKS.register("molten_rose_gold", () ->
+                    new LiquidBlock(
+                            ModFluids.MOLTEN_ROSE_GOLD.get(),
+                            BlockBehaviour.Properties.of()
+                                    .mapColor(MapColor.FIRE)
+                                    .replaceable()
+                                    .noCollission()
+                                    .strength(100.0F)
+                                    .noLootTable()
+                    ));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
