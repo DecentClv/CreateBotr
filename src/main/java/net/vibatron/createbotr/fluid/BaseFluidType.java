@@ -11,14 +11,40 @@ public class BaseFluidType extends FluidType {
     private final int tintColor;
     private final Vector3f fogColor;
 
-    public BaseFluidType(final ResourceLocation stillTexture, final ResourceLocation flowingTexture, final ResourceLocation overlayTexture,
-                         final int tintColor, final Vector3f fogColor, final Properties properties, ResourceLocation stillTexture1, ResourceLocation flowingTexture1, ResourceLocation overlayTexture1, int tintColor1, Vector3f fogColor1) {
-
+    public BaseFluidType(
+            ResourceLocation stillTexture,
+            ResourceLocation flowingTexture,
+            ResourceLocation overlayTexture,
+            int tintColor,
+            Vector3f fogColor,
+            Properties properties
+    ) {
         super(properties);
-        this.stillTexture = stillTexture1;
-        this.flowingTexture = flowingTexture1;
-        this.overlayTexture = overlayTexture1;
-        this.tintColor = tintColor1;
-        this.fogColor = fogColor1;
+
+        this.stillTexture = stillTexture;
+        this.flowingTexture = flowingTexture;
+        this.overlayTexture = overlayTexture;
+        this.tintColor = tintColor;
+        this.fogColor = fogColor;
+    }
+
+    public ResourceLocation getStillTexture() {
+        return stillTexture;
+    }
+
+    public ResourceLocation getFlowingTexture() {
+        return flowingTexture;
+    }
+
+    public ResourceLocation getOverlayTexture() {
+        return overlayTexture;
+    }
+
+    public int getTintColor() {
+        return tintColor;
+    }
+
+    public Vector3f getFogColor() {
+        return fogColor;
     }
 }

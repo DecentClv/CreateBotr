@@ -3,6 +3,7 @@ package net.vibatron.createbotr;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.vibatron.createbotr.block.ModBlocks;
+import net.vibatron.createbotr.fluid.ModFluids;
 import net.vibatron.createbotr.item.ModCreativeModeTabs;
 import net.vibatron.createbotr.item.ModItems;
 import org.slf4j.Logger;
@@ -41,6 +42,8 @@ public class CreateBotr {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        ModFluids.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
